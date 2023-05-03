@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "NotoSans";
+  src: url("../assets/fonts/NotoSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../assets/fonts/NotoSans-Bold.ttf");
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222120;
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.header {
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0 auto;
+  padding: 0.75rem 0.75rem 0.25rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem;
+}
+
+.content p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0.75rem 0.5rem;
+  font-size: 0.5rem;
+  color: #999;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 2.25rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #3c3b39;
+  transition: background-color 0.3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.625rem;
+  width: 1.625rem;
+  top: 0.3125rem;
+  left: 4px;
+  background-color: #ededed;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: #2880af;
+}
+
+input:focus-visible + .slider {
+  outline: solid;
+}
+
+input:hover + .slider {
+  box-shadow: 0 0 5px 1px #2880af;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.875rem);
+}
+
+.slider.round {
+  border-radius: 30px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./popup.css">
+</head>
+<body>
+  <header class="header">Hide Chromecast Button</header>
+  <main class="content">
+    <label class="switch">
+      <input type="checkbox" id="toggle" />
+      <span class="slider round"></span>
+    </label>
+    <p>The extension is <span id="status">enabled</span></p>
+  </main>
+  <footer class="footer">
+    <p>Version: 0.1.0</p>
+    <a href="https://github.com/yura4ka/">Github</a>
+  </footer>
+  <script type="module" src="./popup.js"></script>
+</body>
+</html>

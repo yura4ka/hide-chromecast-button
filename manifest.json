@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Hide chromecast button",
+  "description": "Hide the Chromecast button, so you will not accidentally click it.",
+  "version": "0.1.0",
+  "icons": {
+    "16": "assets/images/icon-16.png",
+    "32": "assets/images/icon-32.png",
+    "48": "assets/images/icon-48.png",
+    "128": "assets/images/icon-128.png"
+  },
+  "permissions": ["scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
