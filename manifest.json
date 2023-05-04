@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Hide chromecast button",
   "description": "Hide the Chromecast button, so you will not accidentally click it.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "icons": {
     "16": "assets/images/icon-16.png",
     "32": "assets/images/icon-32.png",

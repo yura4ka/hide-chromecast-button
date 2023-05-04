@@ -17,7 +17,7 @@ async function toggleStyles(enabled) {
   await Promise.allSettled(
     tabs.map((t) =>
       chrome.scripting.executeScript({
-        target: { tabId: t.id },
+        target: { tabId: t.id, allFrames: true },
         func: enabled ? createCss : removeCss,
       })
     )
@@ -32,14 +32,14 @@ function createCss() {
   const css = document.createElement("style");
   css.id = "remove-chromecast-ext";
   css.innerHTML = `
+    google-cast-launcher,
     .ytp-remote-button,
+    .xplayer-chromecast-button,
+    [is="google-cast-button"],
+    [data-chromecast-button="true"],
     [aria-label="Start Casting"],
-    [is="google-cast-button"] {
+    [aria-label="Chromecast"] {
       display: none !important;
-    }
-
-    div {
-      background-color: purple;
     }
   `;
   document.head.appendChild(css);
